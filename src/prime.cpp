@@ -5,7 +5,9 @@
 bool isPrimeHalf(int n, long long* modOps) {
     if (n <= 1)
         return false;
-    for (int i = 2; i <= n/2; i++){
+    if( n % 2 == 0)
+        return false;
+    for (int i = 2; i <= n/2; i=i+2){
         if(modOps)
             (*modOps)++;
         if(n % i == 0)
@@ -22,7 +24,9 @@ bool isPrimeHalf(int n, long long* modOps) {
 bool isPrimeSqrt(int n, long long* modOps) {
     if (n <= 1)
         return false;
-    for (int i = 2; i <= sqrt(n); i++){
+    if( n % 2 == 0)
+        return false;
+    for (int i = 2; i <= sqrt(n); i=i+2){
         if(modOps)
             (*modOps)++;
         if(n % i == 0)
