@@ -9,6 +9,8 @@ int main() {
     long long halfOps = countModOps(isPrimeHalf,LO,HI);
     long long sqrtOps = countModOps(isPrimeSqrt,LO,HI);
     
+    long long modOps = 0;
+    std::cout << isPrimeHalf(92, &modOps) << "\n";
     // TODO: Print the results
     std::cout << "Half method operations: " << halfOps << "\n";
     // Add more output as needed

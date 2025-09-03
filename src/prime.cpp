@@ -4,13 +4,14 @@
 // TODO: Implement isPrimeHalf
 bool isPrimeHalf(int n, long long* modOps) {
     if (n <= 1)
-        return 0;
+        return false;
     for (int i = 2; i <= n/2; i++){
-        (*modOps)++;
+        if(modOps)
+            (*modOps)++;
         if(n % i == 0)
-            return 0;
+            return false;
     }
-    return 1;
+    return true;
     // Your implementation here
     // Checks for divisibility up to n/2
     // return true if n is prime else return false
@@ -20,13 +21,14 @@ bool isPrimeHalf(int n, long long* modOps) {
 // TODO: Implement isPrimeSqrt
 bool isPrimeSqrt(int n, long long* modOps) {
     if (n <= 1)
-        return 0;
+        return false;
     for (int i = 2; i <= sqrt(n); i++){
-        (*modOps)++;
+        if(modOps)
+            (*modOps)++;
         if(n % i == 0)
-            return 0;
+            return false;
     }
-    return 1;
+    return true;
     // Your implementation here
     //Checks for divisibility up to square root of n
     // return true if n is prime else return false
