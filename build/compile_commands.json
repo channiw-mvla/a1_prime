@@ -1,0 +1,14 @@
+[
+{
+  "directory": "C:/Users/sibmf/Desktop/3514/a1_prime/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/a1_prime.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\a1_prime.dir\\src\\main.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a1_prime\\src\\main.cpp",
+  "file": "C:/Users/sibmf/Desktop/3514/a1_prime/src/main.cpp",
+  "output": "CMakeFiles/a1_prime.dir/src/main.cpp.obj"
+},
+{
+  "directory": "C:/Users/sibmf/Desktop/3514/a1_prime/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/a1_prime.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\a1_prime.dir\\src\\prime.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a1_prime\\src\\prime.cpp",
+  "file": "C:/Users/sibmf/Desktop/3514/a1_prime/src/prime.cpp",
+  "output": "CMakeFiles/a1_prime.dir/src/prime.cpp.obj"
+}
+]
