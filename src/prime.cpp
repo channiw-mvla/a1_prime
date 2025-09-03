@@ -5,9 +5,11 @@
 bool isPrimeHalf(int n, long long* modOps) {
     if (n <= 1)
         return false;
+    else if( n <= 3)
+        return true;
     if( n % 2 == 0)
         return false;
-    for (int i = 2; i <= n/2; i=i+2){
+    for (int i = 3; i <= n/2; i=i+2){
         if(modOps)
             (*modOps)++;
         if(n % i == 0)
