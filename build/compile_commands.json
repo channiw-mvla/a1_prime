@@ -10,5 +10,17 @@
   "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/a1_prime.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\a1_prime.dir\\src\\prime.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a1_prime\\src\\prime.cpp",
   "file": "C:/Users/sibmf/Desktop/3514/a1_prime/src/prime.cpp",
   "output": "CMakeFiles/a1_prime.dir/src/prime.cpp.obj"
+},
+{
+  "directory": "C:/Users/sibmf/Desktop/3514/a1_prime/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/my_test.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\my_test.dir\\src\\prime.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a1_prime\\src\\prime.cpp",
+  "file": "C:/Users/sibmf/Desktop/3514/a1_prime/src/prime.cpp",
+  "output": "CMakeFiles/my_test.dir/src/prime.cpp.obj"
+},
+{
+  "directory": "C:/Users/sibmf/Desktop/3514/a1_prime/build",
+  "command": "C:\\msys64\\mingw64\\bin\\g++.exe  @CMakeFiles/my_test.dir/includes_CXX.rsp -g -std=gnu++23 -o CMakeFiles\\my_test.dir\\tests\\test.cpp.obj -c C:\\Users\\sibmf\\Desktop\\3514\\a1_prime\\tests\\test.cpp",
+  "file": "C:/Users/sibmf/Desktop/3514/a1_prime/tests/test.cpp",
+  "output": "CMakeFiles/my_test.dir/tests/test.cpp.obj"
 }
 ]

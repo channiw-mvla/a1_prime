@@ -3,16 +3,16 @@
 #include <cmath>
 // TODO: Implement isPrimeHalf
 bool isPrimeHalf(int n, long long* modOps) {
-    if (n <= 1)
+    if (n <= 1) // 1 and 0 are not prime
         return false;
-    else if( n <= 2)
+    else if( n <= 2) // 2 is prime
         return true;
-    if(modOps)
+    if(modOps) // add to mod ops if not nulls
         (*modOps)++;
     if( n % 2 == 0)
         return false;
-    for (int i = 3; i <= n/2; i=i+2){
-        if(modOps)
+    for (int i = 3; i <= n/2; i=i+2){ // skip every two to check oddss
+        if(modOps) // add to mod ops if not null
             (*modOps)++;
         if(n % i == 0)
             return false;
@@ -26,16 +26,16 @@ bool isPrimeHalf(int n, long long* modOps) {
 
 // TODO: Implement isPrimeSqrt
 bool isPrimeSqrt(int n, long long* modOps) {
-    if (n <= 1)
+    if (n <= 1)// 1 and 0 are not prime
         return false;
-    else if( n <= 2)
+    else if( n <= 2)// 2 is prime
         return true;
-    if(modOps)
-            (*modOps)++;
+    if(modOps)// add to mod ops if not nulls
+        (*modOps)++;
     if( n % 2 == 0)
         return false;
-    for (int i = 3; i <= sqrt(n); i=i+2){
-        if(modOps)
+    for (int i = 3; i <= sqrt(n); i=i+2){// skip every two to check oddss
+        if(modOps) // add to mod ops if not null
             (*modOps)++;
         if(n % i == 0)
             return false;
@@ -49,7 +49,7 @@ bool isPrimeSqrt(int n, long long* modOps) {
 
 // TODO: Implement countModOps
 long long countModOps(PrimeFn isPrime, int lo, int hi) {
-    long long totalModOps = 0;
+    long long totalModOps = 0; // add up the total mod ops for each prime in range
     for (int i = lo; i <= hi; i++){
         long long modOps = 0;
         isPrime(i,&modOps);

@@ -64,6 +64,16 @@ CMAKE_BINARY_DIR = C:\Users\sibmf\Desktop\3514\a1_prime\build
 #=============================================================================
 # Targets provided globally by CMake.
 
+# Special rule for the target test
+test:
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running tests..."
+	"C:\Program Files\CMake\bin\ctest.exe" --force-new-ctest-process $(ARGS)
+.PHONY : test
+
+# Special rule for the target test
+test/fast: test
+.PHONY : test/fast
+
 # Special rule for the target edit_cache
 edit_cache:
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --cyan "Running CMake cache editor..."
@@ -128,6 +138,19 @@ a1_prime/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\a1_prime.dir\build.make CMakeFiles/a1_prime.dir/build
 .PHONY : a1_prime/fast
 
+#=============================================================================
+# Target rules for targets named my_test
+
+# Build rule for target.
+my_test: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 my_test
+.PHONY : my_test
+
+# fast build rule for target.
+my_test/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/build
+.PHONY : my_test/fast
+
 src/main.obj: src/main.cpp.obj
 .PHONY : src/main.obj
 
@@ -158,6 +181,7 @@ src/prime.obj: src/prime.cpp.obj
 # target to build an object file
 src/prime.cpp.obj:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\a1_prime.dir\build.make CMakeFiles/a1_prime.dir/src/prime.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/src/prime.cpp.obj
 .PHONY : src/prime.cpp.obj
 
 src/prime.i: src/prime.cpp.i
@@ -166,6 +190,7 @@ src/prime.i: src/prime.cpp.i
 # target to preprocess a source file
 src/prime.cpp.i:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\a1_prime.dir\build.make CMakeFiles/a1_prime.dir/src/prime.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/src/prime.cpp.i
 .PHONY : src/prime.cpp.i
 
 src/prime.s: src/prime.cpp.s
@@ -174,7 +199,32 @@ src/prime.s: src/prime.cpp.s
 # target to generate assembly for a file
 src/prime.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\a1_prime.dir\build.make CMakeFiles/a1_prime.dir/src/prime.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/src/prime.cpp.s
 .PHONY : src/prime.cpp.s
+
+tests/test.obj: tests/test.cpp.obj
+.PHONY : tests/test.obj
+
+# target to build an object file
+tests/test.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/tests/test.cpp.obj
+.PHONY : tests/test.cpp.obj
+
+tests/test.i: tests/test.cpp.i
+.PHONY : tests/test.i
+
+# target to preprocess a source file
+tests/test.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/tests/test.cpp.i
+.PHONY : tests/test.cpp.i
+
+tests/test.s: tests/test.cpp.s
+.PHONY : tests/test.s
+
+# target to generate assembly for a file
+tests/test.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\my_test.dir\build.make CMakeFiles/my_test.dir/tests/test.cpp.s
+.PHONY : tests/test.cpp.s
 
 # Help Target
 help:
@@ -184,13 +234,18 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
+	@echo ... test
 	@echo ... a1_prime
+	@echo ... my_test
 	@echo ... src/main.obj
 	@echo ... src/main.i
 	@echo ... src/main.s
 	@echo ... src/prime.obj
 	@echo ... src/prime.i
 	@echo ... src/prime.s
+	@echo ... tests/test.obj
+	@echo ... tests/test.i
+	@echo ... tests/test.s
 .PHONY : help
 
 
